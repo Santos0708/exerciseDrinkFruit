@@ -2,11 +2,18 @@ package ec.formos.test.entity;
 
 import java.util.Date;
 
+/***
+ * Class:
+ * 
+ * @author Santiago.Simbaña
+ * @since
+ *
+ */
 public class Inventory {
 
 	private Integer id;
 
-	private Fruit fruit;
+	private Ingredient ingredient;
 
 	private Double stockInit;
 
@@ -22,11 +29,11 @@ public class Inventory {
 		super();
 	}
 
-	public Inventory(Integer id, Fruit fruit, Double stockInit, String transaction, Double valueSale, Double stockFinal,
-			Date dateTran) {
+	public Inventory(Integer id, Ingredient ingredient, Double stockInit, String transaction, Double valueSale,
+			Double stockFinal, Date dateTran) {
 		super();
 		this.id = id;
-		this.fruit = fruit;
+		this.ingredient = ingredient;
 		this.stockInit = stockInit;
 		this.transaction = transaction;
 		this.valueSale = valueSale;
@@ -42,12 +49,12 @@ public class Inventory {
 		this.id = id;
 	}
 
-	public Fruit getFruit() {
-		return fruit;
+	public Ingredient getIngredient() {
+		return ingredient;
 	}
 
-	public void setFruit(Fruit fruit) {
-		this.fruit = fruit;
+	public void setIngredient(Ingredient ingredient) {
+		this.ingredient = ingredient;
 	}
 
 	public Double getStockInit() {
@@ -92,8 +99,9 @@ public class Inventory {
 
 	@Override
 	public String toString() {
-		return "Inventory [id=" + id + ", fruit=" + fruit.getName() + ", stockInit=" + stockInit + ", transaction=" + transaction
-				+ ", valueSale=" + valueSale + ", stockFinal=" + stockFinal + ", dateTran=" + dateTran + "]";
+		return "Inventory [id=" + id + ", ingredient=" + ingredient.getName() + ", ingredient measure ="
+				+ ingredient.getMeasure() + ", stockInit=" + stockInit + ", transaction=" + transaction + ", valueSale="
+				+ valueSale + ", stockFinal=" + stockFinal + ", dateTran=" + dateTran + "]";
 	}
 
 }

@@ -1,7 +1,14 @@
 package ec.formos.test.enumerations;
 
+/***
+ * Class:
+ * 
+ * @author Santiago.Simbaña
+ * @since
+ *
+ */
 public enum Enums {
-	SALE("SL", "Sales"), ACTIVO("IT", "Init");
+	SALE("SL", "Sales"), INITT("IT", "Init"), MILLILITER("ML", "MILLILITER"), GRAMS("GR", "GRAMS");
 
 	private String code;
 	private String name;
